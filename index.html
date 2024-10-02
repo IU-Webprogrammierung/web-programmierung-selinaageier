@@ -6,21 +6,36 @@
     <title>Home</title>
 </head>
 <body>
-    <header><a href="index.html">Web Programmierung</a></header>
-    <main>
-        <img src="alpenglück logo.png" width="100px">
-        <h1>Home</h1>
-        <h1>Buchung</h1>
-        <h1>Über uns</h1>
-        <h1>Kontakt</h1>
-        <p><em>Lorem ipsum sapientem ne neque dolor erat, eros solet invidunt duo Quisque aliquid leo. Pretium patrioque sociis eu nihil Cum enim ad, ipsum alii vidisse justo id. Option porttitor diam voluptua.</em></p>
-    </main>
+    <div id="header"></div>
+
+    <script>
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+        
+    </script>
+
+    <p>Lorem ipsum sapientem ne neque dolor erat,eros solet invidunt duo Quisque aliquid leo. Pretium patrioque sociis eu nihil Cum enim ad, ipsum alii vidisse justo id. Option porttitor diam voluptua.</p>
+    <p>Cu Eam augue dolor dolores quis, Nam aliquando elitr Etiam consetetur. </p>
+    <button>Mehr...</button>
+    
     <footer>
-        Lage & Anfahrt
-        <ul>
-            <li><a href="hyperlinks.html">Hyperlinks</a></li>
-            <li>Nix mehr …</li>
-        </ul>
+        <h1>Lage & Anfahrt</h1>
+        
     </footer>
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+        
+    </script>
 </body>
 </html>
