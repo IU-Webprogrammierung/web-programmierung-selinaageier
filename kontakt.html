@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+
+<div id="header"></div>
+
+    <script>
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+        
+    </script>
+
+</head>
+
+<body>
+    
+<h1>Kontakt</h1>
+<p>Bei Fragen oder sonstigen Anliegen können Sie uns gerne über Telefon, E-Mail oder Social Media erreichen. Alternativ steht Ihnen unser Kontaktformular zur Verfügung.</p>
+<p>*Pflichtfelder</p>
+
+<form action"#" method="post">
+    <label for="name">Name*:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">E-Mail*:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="anliegen">Ihr Anliegen*:</label>
+    <textarea id="anliegen" name="anliegen" rows="10" required></textarea><br><br>
+<input type="submit" value="Senden">
+</form>
+
+<h2>Adresse</h2>
+<p>Alpenglück Resort <br> Passeier Straße 28 <br> 39015 St. Leonhard <br> Südtirol | Italien </p>
+<p>Telefon: +39 0473 786532 <br> E-Mail: info@alpenglueckresort.com </p>
+<p>Wir sind telefonisch von 7 bis 20 Uhr die ganze Woche für Sie erreichbar.</p>
+</body>
+
+<footer>
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+        
+    </script>
+    </footer>
+</html>
