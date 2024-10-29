@@ -71,3 +71,103 @@ p{
     font-family: 'kohinoor bangla', sans-serif;
     color:#000;
 }
+
+footer {
+    background-color: #304d1d;
+    color: #FDFDFD;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+footer .left, footer .center, footer .right {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+}
+
+footer .left p {
+    margin-top: 10px;
+    color: #FDFDFD;
+}
+
+footer .center{
+    text-align: center;
+}
+
+footer .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+input[type="email"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #FDFDFD;
+    color: #304d1d;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c7d5bd;
+}
+
+footer p, footer ul {
+    margin: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: block;
+    margin: 5px 0;
+}
+
+footer a {
+    color: #FDFDFD;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #5B8C3A;
+    text-decoration: underline;
+}
+
+footer h3 {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+input[type="email"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
