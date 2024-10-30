@@ -109,8 +109,133 @@ p{
     text-align: center;
 }
 
+.kontakt h2 {
+    color:#304d1d;
+    text-align: right;
+}
+
 .kontakt .erster-paragraph {
     text-align: center;
+}
+
+.kontakt .zweiter-paragraph {
+    color: #304d1d;
+}
+
+.kontakt .dritter-paragraph {
+    color: #304d1d;
+}
+
+.dritter-paragraph a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.dritter-paragraph a:hover {
+    text-decoration: underline;
+}
+
+.kontakt .vierter-paragraph {
+    color: #304d1d;
+}
+
+/* Container Kontaktformular */
+.kontakt-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.kontakt-formular {
+    flex: 1;
+    margin-right: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.adresse {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.adresse a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.adresse a:hover {
+    text-decoration: underline;
+}
+
+.adresse h2 {
+    text-align: left;
+}
+
+/* Kontakt Form Styles */
+
+.kontakt-formular form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.kontakt-formular label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.kontakt-formular input[type="text"],
+.kontakt-formular input[type="email"],
+.kontakt-formular textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1.5px solid #304d1d;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.kontakt-formular input[type="submit"] {
+    background-color: #5B8C3A;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.kontakt-formular input:focus,
+.kontakt-formular textarea:focus {
+    border-color: #5B8C3A;
+    outline: none;
+    box-shadow: 0 0 5px rgba(91, 140, 58, 0.5);
+}
+
+.kontakt-formular input[type="submit"]:hover  {
+    background-color: #304d1d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .kontakt-formular form {
+        padding: 15px;
+    }
+
+    .kontakt-formular input[type="submit"] {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .kontakt-formular label {
+        font-size: 14px;
+    }
 }
 
 /* Footer Styles */

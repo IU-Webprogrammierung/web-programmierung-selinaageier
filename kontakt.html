@@ -8,8 +8,7 @@
 
 </head>
 
-<body>
-   
+<body class="kontakt">
    <div id="header"></div>
    <div id="header-error" style="color: red; display:none;">Fehler beim Laden des Headers.</div>
 
@@ -30,28 +29,44 @@
         }); 
     </script> 
 
-<body class="kontakt">
 <h1>Kontakt</h1>
 <p class="erster-paragraph">Bei Fragen oder sonstigen Anliegen können Sie uns gerne über Telefon, E-Mail oder Social Media erreichen. Alternativ steht Ihnen unser Kontaktformular zur Verfügung.</p>
-<p>*Pflichtfelder</p>
 
-<form action="#" method="post">
-    <label for="name">Name*:</label>
-    <input type="text" id="name" name="name" aria-label="Name" aria-required="true" required><br><br>
 
-    <label for="email">E-Mail*:</label>
-    <input type="email" id="email" name="email" aria-label="E-Mail" aria-required="true" required><br><br>
+<div class="kontakt-container">
+    <div class="kontakt-formular">
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="name">Name*:</label>
+            <input type="text" id="name" name="name" aria-label="Name" aria-required="true" required><br><br>
+            <span class="error-message" id="name-error" style="display:none;">Bitte geben Sie Ihren Namen ein.</span>
 
-    <label for="anliegen">Ihr Anliegen*:</label>
-    <textarea id="anliegen" name="anliegen" rows="10" aria-label="Ihr Anliegen" aria-required="true" required></textarea><br><br>
-<input type="submit" value="Senden">
-</form>
+            <label for="email">E-Mail*:</label>
+            <input type="email" id="email" name="email" aria-label="E-Mail" aria-required="true" required><br><br>
+            <span class="error-message" id="email-error-1" style="display:none;">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
 
-<h2>Adresse</h2>
-<p>Alpenglück Resort <br> Passeier Straße 28 <br> 39015 St. Leonhard <br> Südtirol | Italien </p>
-<p>Telefon: +39 0473 786532 <br> E-Mail: info@alpenglueckresort.com </p>
-<p>Wir sind telefonisch von 7 bis 20 Uhr die ganze Woche für Sie erreichbar.</p>
-</body>
+            <label for="anliegen">Ihr Anliegen*:</label>
+            <textarea id="anliegen" name="anliegen" rows="10" aria-label="Ihr Anliegen" aria-required="true" required></textarea><br><br>
+            <span class="error-message" id="email-error" style="display:none;">Bitte teilen Sie uns Ihr Anliegen mit.</span>
+            
+            <p>*Pflichtfelder</p>
+            <input type="submit" value="Senden">
+        </form>
+    </div>
+
+    <div class="adresse">
+        <h2>Adresse</h2>
+        <p class="zweiter-paragraph">
+            <a href="https://www.google.com/maps/search/?api=1&query=Passeier+Stra%C3%9FE+28,+39015+St.+Leonhard" target="_blank">
+            Alpenglück Resort <br> Passeier Straße 28 <br> 39015 St. Leonhard <br> Südtirol | Italien
+            </a>
+        </p>
+        <p class="dritter-paragraph">
+            <strong>Telefon:</strong> <a href="tel:+390473786532">+39 0473 786532</a> <br>
+            <strong>E-Mail:</strong> <a href="mailto:info@alpenglueckresort.com">info@alpenglueckresort.com</a>
+        </p>
+        <p class="vierter-paragraph"><strong>Wir sind telefonisch von 7 bis 20 Uhr die ganze Woche für Sie erreichbar.</strong></p>
+    </div>
+</div>
 
 <footer>
     <div id="footer"></div>
@@ -74,7 +89,6 @@
         });    
         
     </script>
-    </footer>
-
+</footer>
 </body>
 </html>
