@@ -1,3 +1,4 @@
+/* Header Style */
 header {
     display: flex;
     align-items: center;
@@ -52,7 +53,7 @@ nav a.active::after{
     background: #000;
 }
 
-
+/* Body Style */
 body {
     margin: 0;
     font-family: 'kohinoor bangla', sans-serif;
@@ -62,6 +63,7 @@ body {
     line-height: 1.6;
 }
 
+/* Typography Styles */
 h1 {
     font-family: 'amandine', sans-serif;
     color:#000;
@@ -72,6 +74,46 @@ p{
     color:#000;
 }
 
+/* Content Styles */
+.container {
+    display: flex;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.text {
+    width: 50%;
+    padding: 0 20px;
+}
+
+/* Buchung */
+
+/* Über uns */
+
+/* Kontakt */
+.kontakt h1 {
+    text-align: center;
+}
+
+.kontakt .erster-paragraph {
+    text-align: center;
+}
+
+/* Footer Styles */
 footer {
     background-color: #304d1d;
     color: #FDFDFD;
@@ -84,7 +126,7 @@ footer {
 }
 
 footer .left, footer .center, footer .right {
-    flex: 1;
+    flex: 1 1 200px;
     min-width: 200px;
     padding: 20px;
 }
@@ -118,6 +160,7 @@ input[type="email"] {
 }
 
 button {
+    width: 100%;
     padding: 10px 15px;
     background-color: #FDFDFD;
     color: #304d1d;
@@ -160,6 +203,7 @@ footer h3 {
     margin-top: 20px;
 }
 
+/* Form Styles */
 form {
     margin-top: 10px;
 }
@@ -169,5 +213,16 @@ input[type="email"] {
     padding: 10px;
     border: none;
     border-radius: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 100px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
 }
 

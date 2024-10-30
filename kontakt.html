@@ -6,35 +6,44 @@
     <title>Kontakt</title>
     <link rel="stylesheet" href="styles.css">
 
-<div id="header"></div>
-
-    <script>
-        fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-                document.getElementById('header').innerHTML = data;
-            })
-        .catch(error => console.error('Fehler beim Laden des Footers:', error));
-        
-    </script>
-
 </head>
 
 <body>
-    
+   
+   <div id="header"></div>
+   <div id="header-error" style="color: red; display:none;">Fehler beim Laden des Headers.</div>
+
+    <script>
+        fetch('header.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Netzwerkantwort war nicht ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        .catch(error => {
+            console.error('Fehler beim Laden des Headers:', error);
+            document.getElementById('header-error').style.display = 'block';
+        }); 
+    </script> 
+
+<body class="kontakt">
 <h1>Kontakt</h1>
-<p>Bei Fragen oder sonstigen Anliegen können Sie uns gerne über Telefon, E-Mail oder Social Media erreichen. Alternativ steht Ihnen unser Kontaktformular zur Verfügung.</p>
+<p class="erster-paragraph">Bei Fragen oder sonstigen Anliegen können Sie uns gerne über Telefon, E-Mail oder Social Media erreichen. Alternativ steht Ihnen unser Kontaktformular zur Verfügung.</p>
 <p>*Pflichtfelder</p>
 
-<form action"#" method="post">
+<form action="#" method="post">
     <label for="name">Name*:</label>
-    <input type="text" id="name" name="name" required><br><br>
+    <input type="text" id="name" name="name" aria-label="Name" aria-required="true" required><br><br>
 
     <label for="email">E-Mail*:</label>
-    <input type="email" id="email" name="email" required><br><br>
+    <input type="email" id="email" name="email" aria-label="E-Mail" aria-required="true" required><br><br>
 
     <label for="anliegen">Ihr Anliegen*:</label>
-    <textarea id="anliegen" name="anliegen" rows="10" required></textarea><br><br>
+    <textarea id="anliegen" name="anliegen" rows="10" aria-label="Ihr Anliegen" aria-required="true" required></textarea><br><br>
 <input type="submit" value="Senden">
 </form>
 
@@ -46,15 +55,26 @@
 
 <footer>
     <div id="footer"></div>
+    <div id="footer-error" style="color: red; display: none;">Fehler beim Laden des Footers.</div>
 
     <script>
         fetch('footer.html')
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Netzwerkantwort war nicht ok');
+            }
+            return response.text();
+        })
         .then(data => {
                 document.getElementById('footer').innerHTML = data;
             })
-        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+        .catch(error => {
+            console.error('Fehler beim Laden des Footers:', error);
+            document.getElementById('footer-error').style.display = 'block';
+        });    
         
     </script>
     </footer>
+
+</body>
 </html>
