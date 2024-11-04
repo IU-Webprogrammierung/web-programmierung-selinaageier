@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
+<head>
     <link rel="stylesheet" href="styles.css">
-    
+    <title>Footer</title>
+</head>
+<body>
+
 <footer>
-    <div class="left">
-    <ul>
-        <li><a href="Impressum">Impressum</a></li>
-        <li><a href="Kontakt">Kontakt</a></li>
-    </ul>
-    <p>&copy; 2024 Alpenglück Resort. Alle Rechte vorbehalten</p>
-    </div>
+    <div class="footer-content">
+        
+        <!-- Link-Bereich (Impressum, Kontakt) -->
+        <div class="footer-links">
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <p>&copy; 2024 Alpenglück Resort. Alle Rechte vorbehalten</p>
+        </div>
 
-    <div class="center">
-    <h3>Folgen Sie uns</h3>
-    <ul>
-        <li><a href="https://instagram.com/alpenglückresort" target="_blank">Instagram</a></li>
-        <li><a href="https://facebook.com/alpenglückresort" target="_blank">Facebook</a></li>
-        <li><a href="https://x.com/alpenglückresort" target="_blank">X</a></li>
-    </ul>
-    </div>
+        <!-- Social Media Bereich -->
+        <div class="social-media">
+            <h3>Folgen Sie uns</h3>
+            <div class="social-buttons">
+                <a href="https://instagram.com/alpenglückresort" target="_blank">Instagram</a>
+                <a href="https://facebook.com/alpenglückresort" target="_blank">Facebook</a>
+                <a href="https://x.com/alpenglückresort" target="_blank">X</a>
+            </div>    
+        </div>
 
-    <div class="right">
-    <h3>Unser Newsletter</h3>
-    <form action="newsletter.php" method="POST">
-        <input type="email" placeholder="E-Mail" required>
-        <button type="submit">Senden</button>
-    </form>
-    </div>
+        <!-- Newsletter Bereich -->
+        <div class="newsletter">
+            <h3>Unser Newsletter</h3>
+            <form action="newsletter.php" method="POST">
+                <input type="email" placeholder="E-Mail" required>
+                <button type="submit">Senden</button>
+            </form>
+        </div>
 
+    </div>
 </footer>
+
+</body>
 </html>

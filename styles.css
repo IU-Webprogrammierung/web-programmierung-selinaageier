@@ -67,8 +67,8 @@ nav a.active::after{
 }
 
 .cursor svg {
-    width: 100%; /* Nimmt die volle Breite des Containers ein */
-    height: 100%; /* Nimmt die volle Höhe des Containers ein */
+    width: 100%;
+    height: 100%;
 }
 
 /* Body Style */
@@ -118,8 +118,124 @@ p{
     padding: 0 20px;
 }
 
-/* Buchung */
+/* Home */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-section {
+    text-align: left;
+    background-color: #f2f7ef;
+    padding: 20px;
+    margin-top: -10px;
+    border-radius: 8px;
+}
+
+.text-section p {
+    margin-bottom: 10px;
+}
+
+.text-section button {
+    padding: 10px 20px;
+    background-color: #8ab371;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-section button:hover {
+    background-color: #759d5c;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #8ab371;
+    margin: 8px auto;
+}
+
+img[alt="Wegweiser aus Holz vor Bergkulisse"] {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .image-section {
+        flex: 1;
+    }
+
+    .text-section {
+        flex: 1;
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Buchung */
 h1, h2, p {
     text-align: center;
     color: #000000;
@@ -234,13 +350,11 @@ img {
 }
 
 /* Über uns */
-
 .ueberuns {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Container für den "Über uns"-Text und das Bild */
 .about-container {
     display: flex;
     align-items: flex-start;
@@ -250,18 +364,15 @@ img {
     padding: 0 15px;
 }
 
-/* Container für den Text */
 .about-text {
     max-width: 600px;
 }
 
-/* Paragraphen */
 .about-text p {
     margin: 10px 0;
     line-height: 1.5;
 }
 
-/* "Über uns"-Bild */
 .about-image {
     width: 100%;
     max-width: 500px;
@@ -269,13 +380,11 @@ img {
     margin-left: 20px;
 }
 
-/* Galerie-Überschrift */
 .galerie-title {
     text-align: center;
     margin: 40px 0 20px;
 }
 
-/* Galerie-Container */
 .gallery-container {
     display: flex;
     justify-content: space-around;
@@ -285,7 +394,6 @@ img {
     padding: 0 15px;
 }
 
-/* Style Galerie-Elemente */
 .gallery-item {
     text-align: center;
     margin: 10px;
@@ -293,7 +401,6 @@ img {
     max-width: 300px;
 }
 
-/* Bilder Galerie */
 .gallery-item img {
     width: 100%;
     max-width: 100%;
@@ -301,14 +408,12 @@ img {
     margin-bottom: 10px;
 }
 
-/* Galerie Beschreibung */
 .gallery-item p {
-    margin: 0; /* Kein Abstand oben und unten */
-    padding: 0; /* Kein Innenabstand */
+    margin: 0;
+    padding: 0;
 }
 
 /* Kontakt */
-/* Überschrift und Einleitungstext */
 h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -325,7 +430,6 @@ h1 {
     color: #000000;
 }
 
-/* Kontaktformular & Adresse */
 .kontakt-container {
     display: flex;
     justify-content: space-around;
@@ -343,7 +447,6 @@ h1 {
     border: none;
 }
 
-/* Formular-Styling */
 .kontakt-formular form label {
     font-weight: bold;
     color: #304D1D;
@@ -382,7 +485,6 @@ h1 {
     background-color: #304D1D;
 }
 
-/* Adresse Styling */
 .adresse h2 {
     font-size: 1.2rem;
     color: #304D1D;
@@ -417,7 +519,6 @@ h1 {
     color: #304D1D;
 }
 
-/* Fehlermeldungen */
 .error-message {
     color: red;
     font-size: 0.9rem;
@@ -438,116 +539,150 @@ h1 {
     }
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #304d1d;
-    color: #FDFDFD;
+    background-color: #dbe5d4;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #000000;
 }
 
-footer .left, footer .center, footer .right {
-    flex: 1 1 200px;
-    min-width: 200px;
-    padding: 20px;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
 }
 
-footer .left p {
-    margin-top: 10px;
-    color: #FDFDFD;
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-footer .center{
+.footer-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.footer-links a:hover {
+    color: #8ab371;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     text-align: center;
 }
 
-footer .right {
+.social-media h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.social-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    gap: 15px;
 }
 
-footer form {
+.social-buttons a {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-input[type="email"] {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px 15px;
-    background-color: #FDFDFD;
-    color: #304d1d;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #c7d5bd;
-}
-
-footer p, footer ul {
-    margin: 10px 0;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    display: block;
-    margin: 5px 0;
-}
-
-footer a {
-    color: #FDFDFD;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 1.2rem;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-footer a:hover {
-    color: #5B8C3A;
-    text-decoration: underline;
+.social-buttons a:hover {
+    background-color: #8AB371;
+    color: #fff;
 }
 
-footer h3 {
-    margin-top: 20px;
+.social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Form Styles */
-form {
-    margin-top: 10px;
+.social-media a:hover {
+    background-color: #8ab371;
+    color: #fff;
 }
 
-input[type="email"] {
-    margin-bottom: 10px;
+.newsletter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter input[type="email"] {
     padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #000000;
+    outline: none;
+    width: 200px;
+    max-width: 100%;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #8ab371;
+    color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .logo img {
-        max-width: 100px;
+.newsletter button:hover {
+    background-color: #759d5c;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .container {
-        flex-direction: column;
+    .footer-links, .social-media, .newsletter {
+        align-items: flex-start;
     }
 }
+
+
 
