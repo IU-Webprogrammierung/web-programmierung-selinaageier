@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <h1 class="ueberuns">Über uns</h1>
+    <div class="about-container">
+        <div class="about-text">
+        <p> Das von Marie und Anton Hofer 2023 gegründete „Alpenglück Resort“ liegt im malerischen Südtirol, umgeben von den beeindruckenden Alpen. Beide sind in Südtirol aufgewachsen und haben die Schönheit ihrer Heimat immer geschätzt. Das Ehepaar ist herzlich und setzt alles daran, ihren Gästen ein unvergessliches Erlebnis zu ermöglichen. </p>
+        <p> Gemeinsam mit unserem engagierten Team setzen wir alles daran, Ihren Aufenthalt unvergesslich zu machen. Wir legen großen Wert auf persönliche Betreuung und individuelle Serviceleistungen. Bei uns sind Sie nicht nur ein Gast, sondern Teil der Alpenglück-Familie. </p>
+    </div>    
+        <img src="Bilder/bildueberuns.jpg" alt="Foto vom gesamten Resort in den Bergen" class="about-image">
+    </div>
+
+<h1 class="galerie-title">Galerie</h1>
+<div class="gallery-container">
+    <div class="gallery-item">
+        <img src="Bilder/bild1gallerie.jpg" alt="Foto von einer Wellness-Liege in einem Zimmer mit großer Glasfront und Blick auf die Berge" width="200px">
+        <p>Entspannung pur in unserer luxuriösen Wellness-Oase und Spa-Bereich</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="Bilder/bild2gallerie.jpg" alt="Foto von einem Wanderer von hinten auf einem schmalen Wanderweg und Blick auf die Berge" width="200px">
+        <p>Geführte Wanderungen durch die atemberaubende Natur Südtirols</p>
+    </div>
+
+    <div class="gallery-item">
+        <img src="Bilder/bild3gallerie.jpg" alt="Foto von vier Alpakas auf einer Wiese in den Bergen" width="200px">
+        <p>Unterwegs mit unseren flauschigen Freunden auf einer Alpaka-Wanderung</p>
+    </div>
+
+</div>
+
+<!-- Cursor -->
+<div class="cursor"></div>
+<script src="script.js" defer></script>
+
+<footer>
+    <div id="footer"></div>
+ </footer>
+
+<script>
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        .catch(error => console.error('Fehler beim Laden des Headers:', error));
+        
+    
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+    </script>
+ </body>  
+</html>

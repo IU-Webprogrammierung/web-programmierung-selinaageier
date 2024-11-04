@@ -53,6 +53,24 @@ nav a.active::after{
     background: #000;
 }
 
+/* Cursor */
+.cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(91, 140, 58, 0.6);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+    z-index: 9999;
+}
+
+.cursor svg {
+    width: 100%; /* Nimmt die volle Breite des Containers ein */
+    height: 100%; /* Nimmt die volle Höhe des Containers ein */
+}
+
 /* Body Style */
 body {
     margin: 0;
@@ -102,66 +120,242 @@ p{
 
 /* Buchung */
 
+h1, h2, p {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+p {
+    padding: 0 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="date"],
+input[type="number"] {
+    padding: 10px;
+    width: 150px;
+    margin: 5px;
+    border: 2px solid #304d1d;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    width: 100px;
+    margin-left: 5px;
+    background-color: #5B8C3A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a6b2b;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    text-align: center;
+    margin: 0 10px;
+}
+
+img {
+    width: 200px;
+    border-radius: 8px;
+}
+
 /* Über uns */
 
-/* Kontakt */
-.kontakt h1 {
+.ueberuns {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.kontakt h2 {
-    color:#304d1d;
-    text-align: right;
-}
-
-.kontakt .erster-paragraph {
-    text-align: center;
-}
-
-.kontakt .zweiter-paragraph {
-    color: #304d1d;
-}
-
-.kontakt .dritter-paragraph {
-    color: #304d1d;
-}
-
-.dritter-paragraph a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.dritter-paragraph a:hover {
-    text-decoration: underline;
-}
-
-.kontakt .vierter-paragraph {
-    color: #304d1d;
-}
-
-/* Container Kontaktformular */
-.kontakt-container {
+/* Container für den "Über uns"-Text und das Bild */
+.about-container {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 0 auto;
     max-width: 1200px;
+    padding: 0 15px;
 }
 
-.kontakt-formular {
-    flex: 1;
-    margin-right: 20px;
-    width: 100%;
+/* Container für den Text */
+.about-text {
     max-width: 600px;
 }
 
-.adresse {
-    flex: 1;
-    text-align: left;
+/* Paragraphen */
+.about-text p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* "Über uns"-Bild */
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     margin-left: 20px;
 }
 
+/* Galerie-Überschrift */
+.galerie-title {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+/* Galerie-Container */
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+/* Style Galerie-Elemente */
+.gallery-item {
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 30%;
+    max-width: 300px;
+}
+
+/* Bilder Galerie */
+.gallery-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Galerie Beschreibung */
+.gallery-item p {
+    margin: 0; /* Kein Abstand oben und unten */
+    padding: 0; /* Kein Innenabstand */
+}
+
+/* Kontakt */
+/* Überschrift und Einleitungstext */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.erster-paragraph {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Kontaktformular & Adresse */
+.kontakt-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.kontakt-formular,
+.adresse {
+    width: 45%;
+    padding: 20px;
+    background-color: #FDFDFD;
+    border: none;
+}
+
+/* Formular-Styling */
+.kontakt-formular form label {
+    font-weight: bold;
+    color: #304D1D;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.kontakt-formular form input[type="text"],
+.kontakt-formular form input[type="email"],
+.kontakt-formular form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #304D1D;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #000000;
+}
+
+.kontakt-formular form textarea {
+    resize: vertical;
+}
+
+.kontakt-formular form input[type="submit"] {
+    background-color: #5B8C3A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.kontakt-formular form input[type="submit"]:hover {
+    background-color: #304D1D;
+}
+
+/* Adresse Styling */
+.adresse h2 {
+    font-size: 1.2rem;
+    color: #304D1D;
+    margin-bottom: 10px;
+}
+
+.adresse p {
+    font-size: 1rem;
+    color: #304D1D;
+    margin-bottom: 10px;
+}
+
 .adresse a {
-    color: inherit;
+    color: #304D1D;
     text-decoration: none;
 }
 
@@ -169,72 +363,37 @@ p{
     text-decoration: underline;
 }
 
-.adresse h2 {
-    text-align: left;
+.adresse .zweiter-paragraph {
+    color: #304D1D;
 }
 
-/* Kontakt Form Styles */
-
-.kontakt-formular form {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 900px;
-    margin: auto;
+.adresse .dritter-paragraph strong {
+    color: #304D1D;
 }
 
-.kontakt-formular label {
-    display: block;
-    margin-bottom: 5px;
+.adresse .vierter-paragraph {
     font-weight: bold;
+    color: #304D1D;
 }
 
-.kontakt-formular input[type="text"],
-.kontakt-formular input[type="email"],
-.kontakt-formular textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: 1.5px solid #304d1d;
-    border-radius: 4px;
-    box-sizing: border-box;
+/* Fehlermeldungen */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
 }
 
-.kontakt-formular input[type="submit"] {
-    background-color: #5B8C3A;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.kontakt-formular input:focus,
-.kontakt-formular textarea:focus {
-    border-color: #5B8C3A;
-    outline: none;
-    box-shadow: 0 0 5px rgba(91, 140, 58, 0.5);
-}
-
-.kontakt-formular input[type="submit"]:hover  {
-    background-color: #304d1d;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 600px) {
-    .kontakt-formular form {
-        padding: 15px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kontakt-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .kontakt-formular input[type="submit"] {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    .kontakt-formular label {
-        font-size: 14px;
+    .kontakt-formular,
+    .adresse {
+        width: 90%;
+        margin-bottom: 20px;
     }
 }
 

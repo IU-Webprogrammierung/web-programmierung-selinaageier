@@ -19,39 +19,54 @@
     </script>
 
 </head>
+
 <body>
     <h1>Jetzt Traumurlaub buchen</h1>
     
     <p>Buchen Sie noch heute Ihren persönlichen Traumurlaub im Alpenglück Resort!</p>
 
-    <form>
-        <label for="anreise">Anreise:</label>
-        <input type="date" id="anreise" name="anreise"><br><br>
+    <div class="form-container">
+        <form>
+            <label for="anreise">Anreise:</label>
+            <input type="date" id="anreise" name="anreise">
 
-        <label for="abreise">Abreise:</label>
-        <input type="date" id="abreise" name="abreise"><br><br>
+            <label for="abreise">Abreise:</label>
+            <input type="date" id="abreise" name="abreise">
 
-        <label for="gaeste">Gäste:</label>
-        <input type="number" id="gaeste" name="gaeste" min="1" max="5"><br><br>
+            <label for="gaeste">Gäste:</label>
+            <input type="number" id="gaeste" name="gaeste" min="1" max="5">
 
-        <button>Suche</button>
-    </form>
+            <button type="submit">Suche</button>
+        </form>
+    </div>
 
-    <img src="Bilder/goldmarie.jpg" alt="Goldmarie" width="200px">
-    <h2>Suite "Goldmarie"</h2>
-    <button>Details</button>
+    <div class="image-container">
+        <div class="image-box">
+            <img src="Bilder/goldmarie.jpg" alt="Foto von einem Badezimmer in weißer Mamor-Optik, schwarzem Marmor-Boden und -verzierungen sowie goldenen Details" width="200px">
+            <h2>Suite "Goldmarie"</h2>
+            <button>Details</button>
+        </div>
 
-    <img src="Bilder/chalet.jpg" alt="Chalet" width="200px">
-    <h2>Chalet "Sieben Zwerge"</h2>
-    <button>Details</button>
+        <div class="image-box">
+            <img src="Bilder/chalet.jpg" alt="Foto von einem Holzhaus mit großen in Form eines Dreiecks vor Bergkulisse" width="200px">
+            <h2>Chalet "Sieben Zwerge"</h2>
+            <button>Details</button>
+        </div>
 
-    <img src="Bilder/froschkönig.jpg" alt="Froschkönig" width="200px">
-    <h2>Zimmer "Froschkönig"</h2>
-    <button>Details</button>
+        <div class="image-box">
+            <img src="Bilder/froschkönig.jpg" alt="Foto von einem hellen eingerichteten Schlafzimmer mit weißer Holzdecke, dunklem Holzboden sowie dunklem Schrank und hellblauen Bett" width="200px">
+            <h2>Zimmer "Froschkönig"</h2>
+            <button>Details</button>
+        </div>
+    </div>
 
     <h1>Unser Resort</h1>
-    
-</body>
+    <img src="Bilder/bildresort.jpg" alt="Auf altmodisch angefertigte Zeichnung des Resorts" width="500px">
+
+    <!-- Cursor -->
+<div class="cursor"></div>
+<script src="script.js" defer></script>
+
 <footer>
     <div id="footer"></div>
 
@@ -65,4 +80,5 @@
         
     </script>
 </footer>
+</body>
 </html>
