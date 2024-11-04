@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buchung</title>
     <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
     <div id="header"></div>
 
     <script>
@@ -15,12 +17,8 @@
                 document.getElementById('header').innerHTML = data;
             })
         .catch(error => console.error('Fehler beim Laden des Footers:', error));
-        
     </script>
 
-</head>
-
-<body>
     <h1>Jetzt Traumurlaub buchen</h1>
     
     <p>Buchen Sie noch heute Ihren persönlichen Traumurlaub im Alpenglück Resort!</p>
@@ -61,13 +59,13 @@
     </div>
 
     <h1>Unser Resort</h1>
-    <img src="Bilder/bildresort.jpg" alt="Auf altmodisch angefertigte Zeichnung des Resorts" width="500px">
+    <img src="Bilder/bildresort.jpg" alt="Auf altmodisch angefertigte Zeichnung des Resorts" class="resort-image">
 
     <!-- Cursor -->
-<div class="cursor"></div>
-<script src="script.js" defer></script>
+    <div class="cursor"></div>
+    <script src="script.js" defer></script>
 
-<footer>
+    <footer>
     <div id="footer"></div>
 
     <script>
@@ -79,6 +77,6 @@
         .catch(error => console.error('Fehler beim Laden des Footers:', error));
         
     </script>
-</footer>
+    </footer>
 </body>
 </html>
