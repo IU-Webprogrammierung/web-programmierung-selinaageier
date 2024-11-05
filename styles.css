@@ -549,7 +549,12 @@ footer {
     justify-content: center;
     text-align: center;
     font-size: 0.9rem;
-    color: #000000;
+    color: #304D1D;
+}
+
+footer .socialmedia h3,
+footer .newsletter h3 {
+    color: #304D1D;
 }
 
 .footer-content {
@@ -576,8 +581,21 @@ footer {
     text-align: left;
 }
 
-.footer-links a {
+.footer a {
+    color: #304D1D;
+    text-decoration: none;
+}
+
+.footer a:visited {
     color: #000000;
+}
+
+.footer p {
+    color: #304D1D;
+}
+
+.footer .footer-links a {
+    color: #304D1D;
     text-decoration: none;
     margin-bottom: 8px;
     display: block;
@@ -611,36 +629,23 @@ footer {
     justify-content: center;
     width: 36px;
     height: 36px;
-    border: 2px solid #000000;
-    border-radius: 50%;
-    color: #000000;
-    font-size: 1.2rem;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
 }
 
 .social-buttons a:hover {
-    background-color: #8AB371;
-    color: #fff;
+    box-shadow: 0 4px 12px rgba(91, 140, 58, 0.6);
 }
 
-.social-media a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border: 2px solid #000000;
-    border-radius: 50%;
-    color: #000000;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+.social-buttons a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.social-media a:hover {
-    background-color: #8ab371;
-    color: #fff;
+.social-buttons a:hover img {
+    border: 2px solid #8AB371;
 }
 
 .newsletter {
