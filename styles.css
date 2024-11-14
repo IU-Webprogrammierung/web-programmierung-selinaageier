@@ -71,20 +71,20 @@ nav a {
     transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:active{
-    color:#5B8C3A;
-    font-weight: bold;
+nav a.active {
+    color:#5B8C3A !important;
     position: relative;
 }
 
 nav a.active::after{
     content: '';
     position: absolute;
+    top: 100%;
     left: 0;
-    bottom: 0;
-    height: 2px;
     width: 100%;
-    background: #5B8C3A;
+    height: 2px;
+    margin-top: 5px;
+    background: #5B8C3A !important;
 }
 
 .menu-toggle {
@@ -108,6 +108,11 @@ nav a.active::after{
     nav li {
         margin: 0  5px;
     }
+
+    nav a {
+        font-size: 18px;
+    }
+
 }
 
 @media (max-width: 402px) {
