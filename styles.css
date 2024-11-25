@@ -236,24 +236,17 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 20px;
 }
 
-.image-section {
+.content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
     max-width: 1200px;
-    margin-bottom: 20px;
-}
-
-.image-section img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
+    gap: 20px;
 }
 
 .text-section {
@@ -281,6 +274,63 @@ body {
     background-color: #759d5c;
 }
 
+/* Split Screen */
+.split-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.split {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.split img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left, .right {
+    height: 100vh;
+    width: 50%;
+}
+
+.right {
+    background-color: #eaf0e6;
+}
+
+.split.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.split.right p,
+.split.right button {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.split left img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.centered h1 {
+    margin-bottom: 20px;
+}
+
 h1 {
     font-size: 2rem;
     margin: 20px 0;
@@ -295,11 +345,8 @@ h1::after {
     background-color: #8ab371;
     margin: 8px auto;
 }
-
-img[alt="Wegweiser aus Holz vor Bergkulisse"] {
+.centered img[alt="Wegweiser aus Holz vor Bergkulisse"] {
     max-width: 100%;
-    height: auto;
-    margin-top: 10px;
     border-radius: 8px;
 }
 
@@ -426,6 +473,7 @@ button:hover {
     max-width: 1000px;
     height: 500px;
     object-fit: cover;
+    margin-bottom: 90px;
 }
 
 img {
@@ -524,8 +572,9 @@ img {
 }
 
 .gallery-item p {
-    margin: 0;
+    margin: 20px;
     padding: 0;
+    margin-bottom: 50px;
 }
 
 /* Kontakt */
@@ -539,8 +588,8 @@ h1 {
 
 .erster-paragraph {
     text-align: center;
-    margin: 20px auto;
-    max-width: 600px;
+    margin: 30px auto 0;
+    max-width: 1000px;
     font-size: 1rem;
     color: #000000;
 }
@@ -598,6 +647,12 @@ h1 {
 
 .kontakt-formular form input[type="submit"]:hover {
     background-color: #304D1D;
+}
+
+.adresse h2, .adresse p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 .adresse h2 {
