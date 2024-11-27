@@ -178,7 +178,7 @@ body {
     font-family: 'kohinoor bangla', sans-serif;
     background-color: #FDFDFD;
     color: #000;
-    padding: 20px;
+    padding-top: 20px;
     line-height: 1.6;
 }
 
@@ -229,49 +229,12 @@ p {
 }
 
 body {
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: 'kohinoor bangla', sans-serif;
     color: #333;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    max-width: 1200px;
-    width: 100%;
-    gap: 20px;
-}
-
-.text-section {
-    text-align: left;
-    background-color: #f2f7ef;
-    padding: 20px;
-    margin-top: -10px;
-    border-radius: 8px;
-}
-
-.text-section p {
-    margin-bottom: 10px;
-}
-
-.text-section button {
-    padding: 10px 20px;
-    background-color: #8ab371;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.text-section button:hover {
-    background-color: #759d5c;
+a {
+    text-decoration: none;
 }
 
 /* Split Screen */
@@ -293,6 +256,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0;
 }
 
 .left, .right {
@@ -302,6 +266,8 @@ body {
 
 .right {
     background-color: #eaf0e6;
+    height: 100vh;
+    padding: 0;
 }
 
 .split.right {
@@ -309,22 +275,52 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 0px;
 }
 
-.split.right p,
-.split.right button {
+.split.right p {
     text-align: left;
-    margin: 10px 0;
+    margin: 20px 0;
+    margin-left: 30px;
+    font-family: 'amandine', sans-serif;
+    font-size: 25px;
+    color:#304D1D;
+}
+
+.mehr-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #8ab371;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mehr-button-container {
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.mehr-button:hover {
+    background-color: #759d5c;
 }
 
 .split left img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.centered img {
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .centered h1 {
@@ -344,10 +340,6 @@ h1::after {
     height: 2px;
     background-color: #8ab371;
     margin: 8px auto;
-}
-.centered img[alt="Wegweiser aus Holz vor Bergkulisse"] {
-    max-width: 100%;
-    border-radius: 8px;
 }
 
 /* Responsive Design */
