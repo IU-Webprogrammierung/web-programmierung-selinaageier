@@ -241,7 +241,7 @@ a {
 .split-container {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .split {
@@ -262,6 +262,7 @@ a {
 .left, .right {
     height: 100vh;
     width: 50%;
+    margin-top: 20px;
 }
 
 .right {
@@ -425,7 +426,7 @@ input[type="number"] {
 
 button {
     padding: 10px;
-    width: 100px;
+    width: 150px;
     margin-left: 5px;
     background-color: #5B8C3A;
     color: #ffffff;
@@ -456,6 +457,8 @@ button:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    border-radius: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .resort-image {
@@ -466,6 +469,8 @@ button:hover {
     height: 500px;
     object-fit: cover;
     margin-bottom: 90px;
+    border-radius: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 img {
@@ -501,17 +506,21 @@ img {
 
 .about-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 100%;
     padding: 0 15px;
+    gap: 20px;
 }
 
 .about-text {
-    max-width: 600px;
-    margin-top: 40px;
+    flex: 1 1 50%;
+    max-width: 750px;
+    margin-top: 20px;
+    margin-left: 70px;
+    text-align: justify;
 }
 
 .about-text p {
@@ -521,11 +530,21 @@ img {
 }
 
 .about-image {
-    flex-basis: 100%;
+    flex: 1 1 50%;
     width: 100%;
     max-width: 450px;
     height: auto;
-    margin-left: 20px;
+    margin-right: 70px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        max-width: 80%;
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 402px) {
@@ -561,6 +580,8 @@ img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item p {
@@ -591,7 +612,7 @@ h1 {
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -715,9 +736,12 @@ footer {
     width: 100%;
 }
 
-footer .socialmedia h3,
+footer .social-media h3,
 footer .newsletter h3 {
+    font-family: 'amandine', sans-serif;
     color: #304D1D;
+    font-size: 20px;
+    
 }
 
 .footer-content {
