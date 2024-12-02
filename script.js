@@ -19,32 +19,3 @@ window.onload = function() {
     }
 };
 
-// Navigation
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded event wurde ausgelöst!');
-
-    const nav = document.querySelector('nav');
-    if (!nav) {
-        console.error('Das <nav>-Element wurde nicht gefunden!');
-        return;
-    }
-
-    const links = document.querySelectorAll('nav a');
-    console.log('Gefundene Links:', links);
-
-    const currentPath = window.location.pathname.replace(/\/+$/, '');
-    console.log('Aktueller Pfad:', currentPath);
-
-    links.forEach(link => {
-        let linkHref = link.getAttribute('href').replace(/^\/+/, '');
-        linkHref = `/${linkHref}`;
-        
-        console.log('Link Href:', linkHref);
-
-        if (currentPath === linkHref) {
-            console.log(`Aktiv: ${linkHref}`);
-            link.classList.add('active');
-        }
-    });
-});
