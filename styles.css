@@ -258,6 +258,8 @@ a {
     display: flex;
     width: 100%;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .split {
@@ -278,7 +280,7 @@ a {
 .left, .right {
     height: 100vh;
     width: 50%;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .right {
@@ -300,7 +302,7 @@ a {
     margin: 20px 0;
     margin-left: 30px;
     font-family: 'amandine', sans-serif;
-    font-size: 25px;
+    font-size: 26px;
     color:#304D1D;
 }
 
@@ -359,40 +361,106 @@ h1::after {
     margin: 8px auto;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
+@media (max-width: 402px) {
+    .split-container {
+        flex-direction: column;
+        gap: 0;
     }
 
-    .image-section {
-        flex: 1;
+    .split {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
     }
 
-    .text-section {
-        flex: 1;
-        max-width: 500px;
-        padding: 20px;
+    .split img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+
+    .split.left img,
+    .split.right img {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .split-right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .split-right p {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .split-container .centered h1 {
+        font-size: 26px;
+    }
+
+    .split-container .split.right p  {
+        font-size: 20px;
+    }
+
+    .split.right .mehr-button-container {
+        margin-right: 20px;
+    }
+
+    .split.right .mehr-button {
+        margin-right: 20px;
+    }
+
+    .split.right .wegweiser-bild [src="Bilder/bild2home.jpg"] {
+        background-color: #FDFDFD;
+    }
+}
+
+@media (max-width: 880px) {
+    .split-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .split {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .split img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .split.left img,
+    .split-right img {
+        max-height: 600px;
+    }
+
+    .split.right .mehr-button-container {
+        margin: 10px 40px 40px 0;
+    }
+
+    .split.right .mehr-button {
+        margin-right: 20px;
     }
 
     h1 {
-        text-align: left;
+        font-size: 1.8rem;
+        margin: 20px auto;
     }
 }
 
-@media (min-width: 1024px) {
-    .container {
-        padding: 0 40px;
-    }
-
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
 
 /* Buchung */
 h1, h2, p {
