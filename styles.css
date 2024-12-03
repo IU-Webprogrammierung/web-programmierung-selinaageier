@@ -209,7 +209,7 @@ body {
 }
 
 /* Typography Styles */
-h1 {
+h1, h2, h3 {
     font-family: 'amandine', sans-serif;
     color:#000;
 }
@@ -248,17 +248,6 @@ p {
 }
 
 /* Home */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'kohinoor bangla', sans-serif;
-    color: #333;
-}
-
 a {
     text-decoration: none;
 }
@@ -340,7 +329,7 @@ a {
     background-color: #304D1D;
 }
 
-.split left img {
+.split.left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
