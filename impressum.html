@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <script>
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+    </script>
+
+    <main>
+        <section class="impressum">
+            <h1>Impressum</h1>
+            <p><strong>Alpenglück Resort</strong></p>
+            <p>Passeier Straße 28<br>
+            39015 St. Leonhard<br>
+            Südtirol | Italien</p>
+
+            <p>Telefon: +39 0473 000000<br>
+            E-Mail: info@alpenglueck-resort.it</p>
+
+            <p><strong>Vertretungsberechtigte Geschäftsführer:</strong><br>
+            Marie Hofer &amp Anton Hofer</p>
+
+            <p><strong>Haftungsausschluss:</strong></p>
+            <p>Diese Website ist Teil eines fiktiven Projekts und dient ausschließlich zu Demonstrationszwecken. Alle Inhalte, einschließlich Namen, Adressen und Telefonnummern, sind rein erfunden und haben keinen realen Bezug.</p>
+        </section>
+    </main>
+
+<!-- Cursor -->
+<div class="cursor"></div>
+<script src="script.js" defer></script>
+
+<footer>
+<div id="footer"></div>
+
+<script>
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+    .catch(error => console.error('Fehler beim Laden des Footers:', error));
+    
+</script>
+</footer>
+</body>
+</html>
