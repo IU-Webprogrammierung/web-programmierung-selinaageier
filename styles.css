@@ -94,6 +94,35 @@ nav a {
     fill:#304D1D;
 }
 
+@media (max-width: 768px) {
+    .logo {
+        max-width: 80px;
+    }
+
+    .logo-container {
+        position: absolute;
+        left: 10px;
+        transform: translateX(0);
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    nav li:first-child {
+        margin-left: 25px;
+    }
+
+    nav li {
+        margin: 0  2px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
 @media (max-width: 402px) {
     header {
         justify-content: space-between;
@@ -127,10 +156,19 @@ nav a {
         left: 0;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li:first-child {
+        margin-left: 0;
     }
 
     nav li {
-        margin: 10px 0;
+        margin: 0;
     }
 
     nav a {
@@ -138,35 +176,7 @@ nav a {
         padding: 10px;
         width: 100%;
         display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo {
-        max-width: 80px;
-    }
-
-    .logo-container {
-        position: absolute;
-        left: 10px;
-        transform: translateX(0);
-    }
-
-    nav ul {
-        justify-content: flex-start;
-    }
-
-    nav li:first-child {
-        margin-left: 25px;
-    }
-
-    nav li {
-        margin: 0  2px;
-    }
-
-    nav a {
-        font-size: 16px;
-        padding: 8px 12px;
+        text-align: center;
     }
 }
 
@@ -361,69 +371,6 @@ h1::after {
     margin: 8px auto;
 }
 
-@media (max-width: 402px) {
-    .split-container {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .split {
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-    }
-
-    .split img {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: block;
-    }
-
-    .left, .right {
-        width: 100%;
-        height: auto;
-    }
-
-    .split.left img,
-    .split.right img {
-        margin: 0;
-        padding: 0;
-        display: block;
-    }
-
-    .split-right {
-        align-items: center;
-        text-align: center;
-    }
-
-    .split-right p {
-        margin: 20px auto;
-        text-align: center;
-    }
-
-    .split-container .centered h1 {
-        font-size: 26px;
-    }
-
-    .split-container .split.right p  {
-        font-size: 20px;
-    }
-
-    .split.right .mehr-button-container {
-        margin-right: 20px;
-    }
-
-    .split.right .mehr-button {
-        margin-right: 20px;
-    }
-
-    .split.right .wegweiser-bild [src="Bilder/bild2home.jpg"] {
-        background-color: #FDFDFD;
-    }
-}
-
 @media (max-width: 880px) {
     .split-container {
         flex-direction: column;
@@ -461,6 +408,76 @@ h1::after {
     }
 }
 
+@media (max-width: 402px) {
+    .split-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .split {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .split img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        object-fit: cover;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+
+    .split.left img,
+    .split.right img {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .split-right {
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .split-right p {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .split-container .centered h1 {
+        font-size: 26px;
+    }
+
+    .split-container .split.right p  {
+        font-size: 20px;
+    }
+
+    .split.right .mehr-button-container {
+        margin-right: 20px;
+    }
+
+    .split.right .mehr-button {
+        margin-right: 20px;
+    }
+
+    .split.right .wegweiser-bild {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 
 /* Buchung */
 h1, h2, p {
@@ -572,6 +589,53 @@ img {
     border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+    form {
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    .form-container {
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+    input[type="date"],
+    input[type="number"],
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-box {
+        margin: 10px 0;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .resort-image {
+        width: 90%;
+        height: auto;
+    }
+}
+
 @media (max-width: 402px) {
     form {
         display: flex;
@@ -624,53 +688,6 @@ img {
         font-size: 0.9rem;
         width: auto;
         min-width: 120px;
-    }
-
-    .resort-image {
-        width: 90%;
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    form {
-        flex-wrap: wrap;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    label {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-    
-    .form-container {
-        flex-direction: column;
-        margin: 10px;
-    }
-    
-    input[type="date"],
-    input[type="number"],
-    button {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .image-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-box {
-        margin: 10px 0;
-    }
-
-    button {
-        width: 100%;
     }
 
     .resort-image {
@@ -756,6 +773,26 @@ img {
     padding: 0;
     margin-bottom: 50px;
     }
+    
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .about-text {
+        max-width: 100%;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .about-image {
+        max-width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+}
 
 @media (max-width: 402px) {
     .ueberuns {
@@ -792,26 +829,6 @@ img {
     .gallery-item p {
         font-size: 16px;
         margin-bottom: 30px;
-    }
-}
-    
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .about-text {
-        max-width: 100%;
-        margin-left: 0;
-        padding-right: 0;
-    }
-
-    .about-image {
-        max-width: 80%;
-        display: block;
-        margin: 0 auto;
     }
 }
 
@@ -854,7 +871,7 @@ h1 {
     color: #304D1D;
     display: block;
     margin-bottom: 5px;
-    text-align: left !important;
+    text-align: left;
 }
 
 .kontakt-formular form input[type="text"],
@@ -947,6 +964,28 @@ h1 {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .kontakt-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .kontakt-formular,
+    .adresse {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .kontakt-formular form label {
+        text-align: left;
+    }
+
+    .kontakt-formular form input[type="submit"] {
+        width: 100%;
+    }
+}
+
 @media (max-width: 402px) {
     .kontakt-container {
         padding: 5px;
@@ -980,37 +1019,15 @@ h1 {
     }
 }
 
-@media (max-width: 768px) {
-    .kontakt-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .kontakt-formular,
-    .adresse {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .kontakt-formular form label {
-        text-align: left;
-    }
-
-    .kontakt-formular form input[type="submit"] {
-        width: 100%;
-    }
-}
-
 /* Footer */
 footer {
     background-color: #dbe5d4;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     font-size: 0.9rem;
     color: #304D1D;
     width: 100%;
@@ -1026,11 +1043,12 @@ footer .newsletter h3 {
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    gap: 70px;
     width: 100%;
     max-width: 1200px;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .footer-links ul {
@@ -1061,8 +1079,9 @@ footer .newsletter h3 {
 
 .footer p {
     color: #304D1D;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
+    text-align: left;
 }
 
 .footer .footer-links a {
@@ -1077,12 +1096,13 @@ footer .newsletter h3 {
 }
 
 .social-media {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .social-media h3 {
@@ -1108,6 +1128,7 @@ footer .newsletter h3 {
 
 .social-buttons a:hover {
     box-shadow: 0 4px 12px rgba(91, 140, 58, 0.6);
+    border-radius: 20%;
 }
 
 .social-buttons a img {
@@ -1117,14 +1138,15 @@ footer .newsletter h3 {
 }
 
 .social-buttons a:hover img {
-    border: 2px solid #8AB371;
+    border: none;
 }
 
 .newsletter {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     gap: 10px;
 }
 
@@ -1137,7 +1159,7 @@ footer .newsletter h3 {
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    width: auto;
+    width: 100%;
 }
 
 .newsletter input[type="email"] {
@@ -1145,8 +1167,9 @@ footer .newsletter h3 {
     border-radius: 20px;
     border: none;
     outline: none;
-    width: 300px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
 .newsletter button {
@@ -1157,7 +1180,8 @@ footer .newsletter h3 {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1168,44 +1192,6 @@ footer .newsletter h3 {
     background-color: #304D1D;
 }
 
-@media (max-width: 402px) {
-    .footer-content {
-        gap: 15px;
-    }
-
-    .footer-links li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .social-buttons {
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    .newsletter input[type="email"] {
-        width: 150px;
-    }
-
-    .newsletter button {
-        width: 80px;
-        font-size: 0.8rem;
-        padding: 8px 15px;
-    }
-
-    footer .footer-content h3 {
-        font-size: 20px;
-    }
-
-    footer .footer-content p {
-        font-size: 16px;
-    }
-
-    footer .footer-links ul li a {
-        font-size: 16px;
-    }
-}
-
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -1214,6 +1200,19 @@ footer .newsletter h3 {
     }
 
     .footer-links ul {
+        text-align: center;
+    }
+
+    .footer p {
+        text-align: center;
+    }
+
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
 
@@ -1229,6 +1228,61 @@ footer .newsletter h3 {
 
     .newsletter button {
         width: 100px;
+    }
+}
+
+@media (max-width: 402px) {
+    .footer-content {
+        gap: 15px;
+    }
+
+    .footer-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .social-buttons {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .newsletter input[type="email"] {
+        width: 150px;
+    }
+
+    .newsletter button {
+        width: 80px;
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    footer .footer-content h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    footer .footer-content p {
+        font-size: 16px;
+    }
+
+    footer .footer-links ul li a {
+        font-size: 16px;
     }
 }
 
@@ -1256,6 +1310,12 @@ footer .newsletter h3 {
     text-align: left;
 }
 
+@media (max-width: 768px) {
+    .impressum {
+        padding: 15px;
+    }
+}
+
 @media (max-width: 402px) {
     .impressum h1 {
         font-size: 26px;
@@ -1263,12 +1323,5 @@ footer .newsletter h3 {
 
     .impressum p {
         font-size: 16px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .impressum {
-        padding: 15px;
     }
 }
