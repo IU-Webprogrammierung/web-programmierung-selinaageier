@@ -845,13 +845,13 @@ h1 {
     text-align: center;
     margin: 30px auto 0;
     max-width: 1000px;
-    font-size: 1rem;
+    font-size: 20px;
     color: #000000;
 }
 
 .kontakt-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-start;
     padding: 20px;
     max-width: 1500px;
@@ -885,6 +885,7 @@ h1 {
     font-size: 1rem;
     font-family: inherit;
     color: #000000;
+    text-align: left;
 }
 
 .kontakt-formular form textarea {
@@ -906,7 +907,7 @@ h1 {
     background-color: #304D1D;
 }
 
-.kontakt-formular .button-container {
+.kontakt-formular form .button-container-formular {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -1025,7 +1026,7 @@ footer {
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     text-align: left;
     font-size: 0.9rem;
@@ -1079,7 +1080,7 @@ footer .newsletter h3 {
 
 .footer p {
     color: #304D1D;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
 }
@@ -1158,7 +1159,7 @@ footer .newsletter h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     width: 100%;
 }
 
@@ -1180,7 +1181,7 @@ footer .newsletter h3 {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    width: 100%;
+    width: auto;
     max-width: 100px;
     display: flex;
     align-items: center;
@@ -1209,6 +1210,14 @@ footer .newsletter h3 {
 
 
     .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .newsletter {
         display: flex;
         flex-direction: column;
         align-items: center;
