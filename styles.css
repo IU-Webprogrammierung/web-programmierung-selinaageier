@@ -19,7 +19,6 @@ header {
     font-size: 21px;
     font-family: 'amandine', sans-serif;
     width: 100%;
-    box-sizing: border-box;
     position: relative;
     z-index: 10;
 }
@@ -43,7 +42,6 @@ nav {
     width: 100%;
     max-width: 100vw;
     padding: 0 16px;
-    box-sizing: border-box;
 }
 
 nav ul {
@@ -268,6 +266,27 @@ a:hover {
     display: flex;
 }
 
+img {
+    border-radius: 0;
+}
+
+
+button {
+    border-radius: 20px;
+    padding: 10px;
+    width: 150px;
+    margin-left: 5px;
+    background-color: #5B8C3A;
+    color: #ffffff;
+    height: 2.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #304D1D;
+}
+
 .image-section {
     flex: 1;
 }
@@ -327,7 +346,6 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0;
 }
 
 .left, .right {
@@ -338,7 +356,6 @@ a:hover {
 
 .right {
     background-color: #eaf0e6;
-    height: 100vh;
     padding: 0;
 }
 
@@ -362,11 +379,6 @@ a:hover {
 .mehr-button {
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #5B8C3A;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -377,10 +389,6 @@ a:hover {
     align-self: flex-end;
     margin-top: 20px;
     margin-right: 30px;
-}
-
-.mehr-button:hover {
-    background-color: #304D1D;
 }
 
 .split.left img {
@@ -538,22 +546,6 @@ input[type="number"] {
     
 }
 
-button {
-    padding: 10px;
-    width: 150px;
-    margin-left: 5px;
-    background-color: #5B8C3A;
-    color: #ffffff;
-    height: 2.5rem;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #304D1D;
-}
-
 .image-container {
     display: flex;
     justify-content: center;
@@ -577,7 +569,6 @@ button:hover {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -589,13 +580,7 @@ button:hover {
     height: 500px;
     object-fit: cover;
     margin-bottom: 90px;
-    border-radius: 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-img {
-    width: 200px;
-    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -635,10 +620,6 @@ img {
         margin: 10px 0;
     }
 
-    button {
-        width: 100%;
-    }
-
     .resort-image {
         width: 90%;
         height: auto;
@@ -672,7 +653,6 @@ img {
     button {
         font-size: 0.9rem;
         padding: 8px;
-        border-radius: 20px;
     }
 
     .image-box img {
@@ -731,7 +711,6 @@ img {
     height: auto;
     margin-right: 70px;
     object-fit: cover;
-    border-radius: 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -761,7 +740,6 @@ img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    border-radius: 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -860,7 +838,7 @@ img {
     color: #304D1D;
     display: block;
     margin-bottom: 5px;
-    text-align: left;
+    text-align: center;
 }
 
 .kontakt-formular form input[type="text"],
@@ -889,6 +867,7 @@ img {
     border-radius: 20px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 
@@ -959,10 +938,6 @@ img {
     .adresse {
         width: 100%;
         margin-bottom: 20px;
-    }
-
-    .kontakt-formular form label {
-        text-align: left;
     }
 
     .kontakt-formular form input[type="submit"] {
@@ -1044,13 +1019,8 @@ footer .newsletter h3 {
 
 .footer a {
     color: #304D1D;
-    text-decoration: none;
     font-size: 20px;
     margin-left: 20px;
-}
-
-.footer a:visited {
-    color: #000000;
 }
 
 .footer p {
@@ -1071,7 +1041,14 @@ footer .newsletter h3 {
     color: #8ab371;
 }
 
-.social-media {
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-media, .newsletter {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1081,7 +1058,7 @@ footer .newsletter h3 {
     text-align: left;
 }
 
-.social-media h3 {
+.social-media h3, .newsletter h3 {
     margin: 0;
     font-size: 1.2rem;
 }
@@ -1117,19 +1094,6 @@ footer .newsletter h3 {
     border: none;
 }
 
-.newsletter {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 10px;
-}
-
-.newsletter h3 {
-    margin-bottom: 10px;
-}
-
 .newsletter form {
     display: flex;
     flex-direction: row;
@@ -1150,11 +1114,6 @@ footer .newsletter h3 {
 
 .newsletter button {
     padding: 10px 20px;
-    background-color: #5B8C3A;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
     font-weight: bold;
     width: auto;
     max-width: 100px;
@@ -1164,13 +1123,9 @@ footer .newsletter h3 {
     text-align: center;
 }
 
-.newsletter button:hover {
-    background-color: #304D1D;
-}
-
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 20px;
     }
@@ -1183,16 +1138,7 @@ footer .newsletter h3 {
         text-align: center;
     }
 
-
-    .social-media {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .newsletter {
+    .social-media, .newsletter {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1217,6 +1163,7 @@ footer .newsletter h3 {
 
 @media (max-width: 402px) {
     .footer-content {
+        flex-direction: column;
         gap: 15px;
     }
 
