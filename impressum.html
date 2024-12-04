@@ -8,27 +8,44 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="Bilder/alpenglück-logo.png" width="100px" class="logo" alt="Logo des Alpenglück Resorts">
+            </div>
 
-    <script>
-        fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-                document.getElementById('header').innerHTML = data;
-            })
-        .catch(error => console.error('Fehler beim Laden des Footers:', error));
-    </script>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            <label for="menu-toggle" class="menu-toggle" aria-label="Menü öffnen">
+                <svg width="30" height="30" viewBox="0 0 100 80" fill="#304D1D">
+                    <rect y="10" width="100" height="10" rx="5"></rect>
+                    <rect y="40" width="100" height="10" rx="5"></rect>
+                    <rect y="70" width="100" height="10" rx="5"></rect>
+                </svg>
+            </label>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buchung.html">Buchung</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="impressum">
             <h1>Impressum</h1>
             <p><strong>Alpenglück Resort</strong></p>
-            <p>Passeier Straße 28<br>
-            39015 St. Leonhard<br>
-            Südtirol | Italien</p>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Passeier+Stra%C3%9FE+28,+39015+St.+Leonhard" target="_blank">
+                    Passeier Straße 28<br>
+                    39015 St. Leonhard<br>
+                    Südtirol | Italien
+                </a>
+            </p>
 
-            <p>Telefon: +39 0473 000000<br>
-            E-Mail: info@alpenglueck-resort.it</p>
+            <p>Telefon: <a href="tel:+390473000000">+39 0473 000000</a><br>
+            E-Mail: <a href="mailto:info@alpenglueck-resort.it">info@alpenglueck-resort.it</a></p>
 
             <p><strong>Vertretungsberechtigte Geschäftsführer:</strong><br>
             Marie Hofer &amp Anton Hofer</p>
@@ -43,17 +60,24 @@
 <script src="script.js" defer></script>
 
 <footer>
-<div id="footer"></div>
-
-<script>
-    fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-            document.getElementById('footer').innerHTML = data;
+    <div id="footer"></div>
+    <div id="footer-error" class="error-message">Fehler beim Laden des Footers.</div>
+    <script>
+        fetch('footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Netzwerkantwort war nicht ok');
+            }
+            return response.text();
         })
-    .catch(error => console.error('Fehler beim Laden des Footers:', error));
-    
-</script>
+        .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+        .catch(error => {
+            console.error('Fehler beim Laden des Footers:', error);
+            document.getElementById('footer-error').classList.add('show');
+        });    
+    </script>
 </footer>
 </body>
 </html>
